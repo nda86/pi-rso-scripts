@@ -7,7 +7,6 @@ PASS='yf100zobq'
 PATH1='pi-distr'
 PATH2='pls0'
 FILES='\*.mp3'
-c=0
 
 HOMEDIR='/home/pi/pls0';
 
@@ -30,6 +29,4 @@ F=$RESULT
 for i in $F
 do
     /usr/bin/wget -c -t8 -w5 ftp://$USER:$PASS@$HOST/$PATH1/$PATH2/$i -o /home/pi/pls0/downloads.log
-    $c=$((c+1))
-    echo "download $c files"
 done
