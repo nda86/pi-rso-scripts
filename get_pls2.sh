@@ -7,7 +7,7 @@ PATH1='pi-distr'
 PATH2='pls2'
 FILES='\*.mp3'
 HOMEDIR='/home/pi/pls2';
-
+c=0
 ###############################################################################
 RESULT='';
 
@@ -26,5 +26,7 @@ executeftp "nlist "$FILES
 F=$RESULT
 for i in $F
 do
+c=$(( c+1 ))
     /usr/bin/wget -c -t8 -w5 ftp://$USER:$PASS@$HOST/$PATH1/$PATH2/$i -o /home/pi/logs/rekl_kras.log
+echo "download $c files"
 done
