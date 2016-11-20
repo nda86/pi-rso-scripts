@@ -16,7 +16,7 @@ executeftp(){
     echo "open" $HOST $PORT > script.ftp
     echo "user" $USER $PASS >> script.ftp
     echo "cd" $PATH1 >> script.ftp
-	echo "cd" $PATH2 >> script.ftp
+    echo "cd" $PATH2 >> script.ftp
     echo $1 >> script.ftp
     echo "bye" >> script.ftp
 

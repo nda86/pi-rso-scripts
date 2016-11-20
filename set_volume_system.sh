@@ -1,2 +1,2 @@
 #!/bin/bash
-alsactl --file ~/.config/alsa.conf restore
+alsactl --file /home/pi/.config/alsa.conf restore
