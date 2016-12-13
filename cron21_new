@@ -1,0 +1,6 @@
+0 9 * * * mpc volume 100 && mpc play 1>/home/pi/logs/play.log 2>/home/pi/logs/play_error.log
+0 21 * * * mpc volume 0 && mpc pause 1>/home/pi/logs/mute.log 2>/home/pi/logs/mute.error.log
+#0,43 * * * * /home/pi/scripts/updtime.sh > /home/pi/logs/updtime.log
+3-59/10 9-20 * * * /home/pi/scripts/set_volume_system.sh > /home/pi/logs/set_volume_system.log
+0 7 * * * /home/pi/scripts/playlist.sh > /home/pi/logs/playlist.log
+*/15 9-21 * * * /home/pi/scripts/rekl.sh > /home/pi/logs/rekl.log
